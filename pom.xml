@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xin</groupId>
+    <artifactId>Sivan_Cache</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sivan-api</module>
+        <module>sivan-core</module>
+        <module>sivan-test</module>
+    </modules>
+
+
+    <properties>
+        <!--============================== All Plugins START ==============================-->
+        <plugin.compiler.version>3.2</plugin.compiler.version>
+        <plugin.compiler.version>3.2</plugin.compiler.version>
+        <plugin.surefire.version>2.18.1</plugin.surefire.version>
+        <plugin.surefire.skip-it>false</plugin.surefire.skip-it>
+        <plugin.surefire.ignore-failure>false</plugin.surefire.ignore-failure>
+
+        <plugin.maven-source-plugin.version>2.2.1</plugin.maven-source-plugin.version>
+        <plugin.maven-javadoc-plugin.version>2.9.1</plugin.maven-javadoc-plugin.version>
+        <plugin.maven-gpg-plugin.version>1.5</plugin.maven-gpg-plugin.version>
+
+        <plugin.coveralls.version>4.3.0</plugin.coveralls.version>
+        <plugin.cobertura.version>2.7</plugin.cobertura.version>
+
+        <!--============================== MAIN ==============================-->
+        <project.compiler.level>1.7</project.compiler.level>
+
+        <!--============================== INTER ==============================-->
+        <heaven.version>0.1.117</heaven.version>
+        <test.version>0.0.1</test.version>
+        <aop.version>0.0.3</aop.version>
+        <log-integration.version>1.1.8</log-integration.version>
+
+        <!--============================== OTHER ==============================-->
+        <junit.version>4.12</junit.version>
+        <fastjson.version>1.2.70</fastjson.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--============================== SELF ==============================-->
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>cache-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!--============================== INTER ==============================-->
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>log-integration</artifactId>
+                <version>${log-integration.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>heaven</artifactId>
+                <version>${heaven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>test-core</artifactId>
+                <version>${test.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>aop-core</artifactId>
+                <version>${aop.version}</version>
+            </dependency>
+
+            <!--============================== OTHER ==============================-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${plugin.compiler.version}</version>
+                <configuration>
+                    <source>${project.compiler.level}</source>
+                    <target>${project.compiler.level}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <compilerArgument>-proc:none</compilerArgument>
+                </configuration>
+            </plugin>
+
+            <!-- Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${plugin.maven-javadoc-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--============================== ADD For sonatype START ==============================-->
+    <name>cache</name>
+    <description>The cache tool for java.</description>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+</project>
