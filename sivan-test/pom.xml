@@ -30,6 +30,18 @@
             <groupId>com.github.houbb</groupId>
             <artifactId>test-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.xin</groupId>
+            <artifactId>sivan-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.xin</groupId>
+            <artifactId>sivan-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <properties>
