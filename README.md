@@ -1,8 +1,7 @@
 # SivanCache渐进式缓存框架😀
 
 
-![image](https://github.com/xiaoxinxing66/Sivan_Cache/assets/93857716/628a02a6-c2ee-4548-8b4a-350dc628d31c)
-
+![SIVANCACHE Logo](https://p16-flow-sign-sg.ciciai.com/ocean-cloud-tos-sg/44b6453b8a67444ba9a4c2f258fa1df0.png~tplv-0es2k971ck-image.png?rk3s=18ea6f23&x-expires=1742024775&x-signature=6MIh%2FpRxBN0EjJsKr0UeS%2BH6tY0%3D){: height="100px" width="100px"}
 
 ## 项目介绍😇
 Java实现渐进式 kv缓存框架， 为日常开发提供一套简单易用的缓存框架 ，便于后期多级缓存开发。  
