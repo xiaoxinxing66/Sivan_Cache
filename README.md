@@ -5,18 +5,19 @@
 ![SIVANCACHE Logo](https://p16-flow-sign-sg.ciciai.com/ocean-cloud-tos-sg/44b6453b8a67444ba9a4c2f258fa1df0.png~tplv-0es2k971ck-image.png?rk3s=18ea6f23&x-expires=1742024775&x-signature=6MIh%2FpRxBN0EjJsKr0UeS%2BH6tY0%3D)
 
 ## 项目介绍😇
-Java实现渐进式 kv缓存框架， 为日常开发提供一套简单易用的缓存框架 ，便于后期多级缓存开发。  
+Java实现渐进式 kv缓存框架， 为日常开发提供一套简单易用的缓存框架 ，便于后期多级缓存开发。 
+
 截至目前已经开发的功能如下：
 
-● 支持 expire 过期特性，实现了定时删除和惰性删除两种过期键删除策略；
+● 支持 expire 过期特性，实现了定时删除和惰性删除两种过期键删除策略；【√】
 
-● 内置FIFO、LRU、LRU-2、 LFU、2Q 等多种缓存淘汰算法；
+● 内置LRU、LRU-2、 LFU、2Q 等多种缓存淘汰算法；【√】
 
-● 自定义删除监听器和慢操作监听器，实现了对删除和慢操作的监听；
+● 自定义删除监听器和慢操作监听器，实现了对删除和慢操作的监听；【√】
 
-● 支持 AOF 持久化机制，实现了对AOF文件的载入与数据还原；
+● 支持 AOF 持久化机制，实现了对AOF文件的载入与数据还原；【√】
 
-● 自定义渐进式 rehash HashMap，实现了渐进式 rehash 扩容机制。
+● 自定义渐进式 rehash HashMap，实现了渐进式 rehash 扩容机制。【√】
 
 ## 项目设计思路
 考虑点主要在数据用何种方式存储，能存储多少数据，多余的数据如何处理以及是否支持持久化等几个点。
