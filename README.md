@@ -1,5 +1,6 @@
 # SivanCache渐进式缓存框架😀
 
+这个项目有logo啦！
 
 ![SIVANCACHE Logo](https://p16-flow-sign-sg.ciciai.com/ocean-cloud-tos-sg/44b6453b8a67444ba9a4c2f258fa1df0.png~tplv-0es2k971ck-image.png?rk3s=18ea6f23&x-expires=1742024775&x-signature=6MIh%2FpRxBN0EjJsKr0UeS%2BH6tY0%3D)
 
@@ -49,6 +50,13 @@ Java实现渐进式 kv缓存框架， 为日常开发提供一套简单易用的
 
 - 监听器
    - 根据实际工作体验，我们可以添加对删除和慢日志的监听，然后有对应的存储或者报警，这样更加方便问题的分析和快速反馈。
+
+## TODO
+
+- 优化过期特性，看看能不能全部仿Redis；
+- 引入AOF + RDB双持久化策略；使用了混合持久化；
+   - AOF 文件的前半部分是 RDB 格式的全量数据，后半部分是 AOF 格式的增量数据。重启 Cache 加载数据的时候，由于前半部分是 RDB 内容，这样加载的时候速度会很快。
+- 调用GPT3.5接口，实现AI生成功能。
 
 ## 写在最后
 
